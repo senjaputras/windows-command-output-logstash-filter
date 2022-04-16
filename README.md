@@ -5,6 +5,14 @@ If you can't install the agent on the host and you just can take the system outp
 
 Ipconfig output:
 ```
+Sample : 
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.0.0.123
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+ ```
+ 
+```
 filter
 {
   grok {
@@ -14,6 +22,11 @@ filter
 ```
 
 Microsoft Windows Firewall
+```
+Sample:
+1990-02-10 11:22:33 ALLOW UDP 10.0.0.123 10.0.0.255 137 137 0 - - - - - - - SEND
+ ```
+
 ```
 filter
 { 
@@ -27,6 +40,11 @@ filter
  ```
 Active Connections / Netstat:
 ```
+Sample:
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       3324
+```
+
+```
 filter
 {
   grok {
@@ -36,6 +54,16 @@ filter
 ```
 
 AV_Status
+```
+Sample:
+AMRunningMode                    : Normal
+AMServiceEnabled                 : True
+AMServiceVersion                 : 2.11.223.1
+AntispywareEnabled               : True
+AntispywareSignatureAge          : 0
+
+```
+
 ```
 filter
 {
