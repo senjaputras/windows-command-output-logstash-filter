@@ -1,0 +1,1 @@
+# windows-command-output-logstash-filter
