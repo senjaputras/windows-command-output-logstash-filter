@@ -1,6 +1,7 @@
 # windows-command-output-logstash-filter
 
-## Here is some simple Grok+Regex to parsing Windows Command Output
+### Here is some simple Grok+Regex to parsing Windows Command Output
+If you can't install the agent on the host and you just can take the system output command. Here are some logstash filters to help you parse some windows command output.
 
 Ipconfig output:
 ```
