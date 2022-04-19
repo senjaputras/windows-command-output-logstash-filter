@@ -21,7 +21,7 @@ filter
 }
 ```
 
-##Microsoft Windows Firewall
+## Microsoft Windows Firewall
 ```
 Sample:
 1990-02-10 11:22:33 ALLOW UDP 10.0.0.123 10.0.0.255 137 137 0 - - - - - - - SEND
@@ -38,7 +38,7 @@ filter
   }
  }
  ```
-##Active Connections / Netstat:
+## Active Connections / Netstat:
 ```
 Sample:
   TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       3324
@@ -53,7 +53,7 @@ filter
 }
 ```
 
-##AV_Status
+## AV_Status
 ```
 Sample:
 AMRunningMode                    : Normal
