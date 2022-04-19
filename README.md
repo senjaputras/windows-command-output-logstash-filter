@@ -75,7 +75,7 @@ filter
 
 
 ## Additional configuration
-If there are some erro when you parse .txt file, like unicode string. You can delete the unicode use this syntax:
+If there are some error unicode string when you parse .txt file. You can delete the unicode use this syntax:
 
 In my case, the unicode is `{:text=>"\\xFF\\xFE\\r\\u0000", :expected_charset=>"UTF-8"}`
 
@@ -85,4 +85,6 @@ filter {
         ruby { code => 'event.set("message", event.get("message").gsub("\r", "".encode("utf-8")))' }
         ruby { code => 'event.set("message", event.get("message").gsub("\xFF", "".encode("utf-8")))' }
         ruby { code => 'event.set("message", event.get("message").gsub("\xFE", "".encode("utf-8")))' }
+        .....
+        }
 ```
