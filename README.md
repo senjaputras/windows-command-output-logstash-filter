@@ -31,7 +31,7 @@ Sample:
 filter
 { 
   grok {
-     match => { "message" => "%{TIMESTAMP_ISO8601:TimeStamp} %{WORD:Action} %{WORD:Protocol} %{IPV4:src} %{IPV4:dst} (%{INT:SrcPort}|-) (%{INT:DStPort}|-) %{INT:Size} %{GREEDYDATA:Flags} %{GREEDYDATA:Direction}"}
+     match => { "message" => "%{TIMESTAMP_ISO8601:TimeStamp} %{WORD:Action} %{WORD:Protocol} (%{IPV6:src}|%{IPV4:src}|.*) (%{IPV6:dst}|%{IPV4:dst}|.*) (%{INT:SrcPort}|.*) (%{INT:DStPort}|.*) %{INT:Size} %{GREEDYDATA:Flags} %{GREEDYDATA:Direction}"}
   }
   date {
         match => ["TimeStamp", "yyyy-MM-dd HH:mm:ss","ISO8601"]
